@@ -1,0 +1,258 @@
+html {
+    overflow-y: hidden;
+}
+
+body {
+  margin: 0;
+  background-color: #202021;
+}
+
+.nav{
+      background: #181818;
+      width: 70px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 3;
+      float: left;
+      overflow: hidden;
+  }
+
+
+.main {
+  background-color: #202021;
+  margin-left: 120px;
+}
+
+.welcome{
+  padding-left: 100px;
+  display: block;
+}
+
+.welcome2{
+  padding-top: 200px;
+  padding-left: 100px;
+  display: block;
+  color: #FFFFFF;
+  font-family: Courier, monospace;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.welcome3{
+  padding-left: 100px;
+  display: block;
+  color: #FFFFFF;
+  font-family: Courier, monospace;
+  font-size: 3.125rem;
+  margin: 0;
+}
+/*################################# .button #################################*/
+
+
+  .button {
+    border: 0;
+    background: #181818;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+    color: #0092ca;
+    font-size: 10px;
+    font-family: 'Varela Round', sans-serif;
+    text-decoration: none;
+    letter-spacing: 2px;
+    overflow: hidden;
+    padding: 0;
+    width: 60px;
+    margin: 0 auto 15px auto;
+    display: block;
+    line-height: 51px;
+    height: 51px;
+    position: relative;
+
+  }
+  .button:hover { background: #181818; }
+  .button span {
+      transition: 0.5s;
+      transition-delay: 0.2s;
+  }
+  .button:before,
+  .button:after {
+      content: '';
+      position: absolute;
+      top: auto;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      opacity: 0;
+      transition: .6s,opacity .6s;
+  }
+
+  /* :before */
+  .button:before {
+      content: attr(data-hover);
+      transform: translate(-150%,0);
+  }
+  /* :after */
+  .button:after {
+    content: attr(data-active);
+    transform: translate(150%,0);
+  }
+  /* Span on :hover and :active */
+  .button:hover span,
+  .button:active span {
+      opacity: 0;
+      transform: scale(0.3);
+  }
+  /* :before pseudo-element on :hover
+      and :after pseudo-element on :active */
+  .button:hover:before,
+  .button:active:after {
+      opacity: 1;
+      transform: translate(0,0);
+      transition-delay: .5s;
+  }
+  .button:active:before {
+      transition-delay: 0s;
+  }
+
+.user {
+  width: 45%;
+  height: auto;
+}
+
+.btn-group{
+  display: inline;
+  text-align: center;
+  padding-top: 12rem;
+
+}
+/*################################# .button end #################################*/
+
+
+.typewriter {
+    font-family: Courier, monospace;
+	  display: inline-block;
+}
+
+.typewriter-text {
+    display: inline-block;
+  	overflow: hidden;
+  	letter-spacing: 2px;
+ 	  animation: typing 2.5s steps(14, end), blink .6s step-end infinite;
+    white-space: nowrap;
+    font-size: 10px;
+    font-weight: 700;
+    border-right: 4px solid #0092ca;
+    box-sizing: border-box;
+    color: #A4A4A4;
+
+}
+
+@keyframes typing {
+    from {
+        width: 1%
+    }
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink {
+    from, to {
+        border-color: transparent
+    }
+    50% {
+        border-color: #0092ca;
+    }
+}
+
+
+
+
+
+
+.Iam {
+  padding: 0 6.25rem;
+  font: normal 40px/50px Courier, monospace;
+  color: #FFFFFF;
+}
+.Iam p {
+  height: 50px;
+  float: left;
+  margin-right: 0.3em;
+}
+.Iam b {
+  float: left;
+  overflow: hidden;
+  position: relative;
+  height: 50px;
+  top: 40px;
+}
+.Iam .innerIam {
+  display: inline-block;
+  color: #0092ca;
+  position: relative;
+  white-space: nowrap;
+  top: 0;
+  left: 0;
+
+
+/*animation*/
+-webkit-animation:move 10s;
+   -moz-animation:move 10s;
+    -ms-animation:move 10s;
+     -o-animation:move 10s;
+        animation:move 10s;
+/*animation-iteration-count*/
+-webkit-animation-iteration-count:infinite;
+   -moz-animation-iteration-count:infinite;
+    -ms-animation-iteration-count:infinite;
+     -o-animation-iteration-count:infinite;
+        animation-iteration-count:infinite;
+/*animation-delay*/
+-webkit-animation-delay:2s;
+   -moz-animation-delay:2s;
+    -ms-animation-delay:2s;
+     -o-animation-delay:2s;
+        animation-delay:2s;
+}
+@keyframes move{
+0%  { top: 0px; }
+20% { top: -50px; }
+40% { top: -100px; }
+60% { top: -150px; }
+80% { top: -200px; }
+}
+
+@-webkit-keyframes move {
+    0%  { top: 0px; }
+    20% { top: -50px; }
+    40% { top: -100px; }
+    60% { top: -150px; }
+    80% { top: -200px; }
+}
+@-moz-keyframes move {
+    0%  { top: 0px; }
+    20% { top: -50px; }
+    40% { top: -100px; }
+    60% { top: -150px; }
+    80% { top: -200px; }
+}
+@-o-keyframes move {
+    0%  { top: 0px; }
+    20% { top: -50px; }
+    40% { top: -100px; }
+    60% { top: -150px; }
+    80% { top: -200px; }
+}
+@keyframes move {
+    0%  { top: 0px; }
+    20% { top: -50px; }
+    40% { top: -100px; }
+    60% { top: -150px; }
+    80% { top: -200px; }
+}
